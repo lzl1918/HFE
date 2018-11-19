@@ -1,0 +1,30 @@
+@import 'imports.less';
+
+.button-base(@background, @foreground) {
+    .transition(background-color, linear, 0.2s);
+    .selection-disabled();
+
+    background-color: @background;
+    color: @foreground;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border: none;
+    outline: none;
+    /*margin: 0.3rem;*/
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.hfe-button {
+    .button-base(#CCC, #000);
+}
+
+.hfe-button:hover {
+    background-color: #AAA;
+    cursor: pointer;
+}
+
+.hfe-button[data-disabled] {
+    .button-base(gray, green);
+}

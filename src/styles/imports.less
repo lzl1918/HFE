@@ -1,0 +1,13 @@
+.transition(@prop, @func, @duration) {
+    -moz-transition: @prop @func @duration;
+    -o-transition: @prop @func @duration;
+    -webkit-transition: @prop @func @duration;
+    transition: @prop @func @duration;
+}
+
+.selection-disabled() {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
